@@ -1,6 +1,6 @@
 :root {
   --main-color: #ffffff;
-  --background-light-color: #e5e5e5;
+  --background-light-color: #f5f4fa;
   --background-dark-color: #2f303a;
   --accent-color: #2196f3;
   --text-color: #212121;
@@ -9,6 +9,14 @@
   --button-hover-color: #188ce8;
   --button-portfolio-color: #f5f4fa;
   --border-color: #ececec;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -34,7 +42,7 @@ ul {
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -60,7 +68,9 @@ img {
 span {
   color: var(--accent-color);
 }
-
+header {
+  border-bottom: 1px solid var(--border-color);
+}
 nav {
   display: flex;
   align-items: center;
@@ -84,10 +94,10 @@ header li:focus {
 .nav {
   display: flex;
   align-items: center;
+}
+header a {
   padding-top: 25px;
   padding-bottom: 25px;
-
-  border-bottom: 1px solid var(--border-color);
 }
 header ul {
   display: flex;
@@ -143,8 +153,11 @@ h2 {
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 50px;
 }
-
+.features {
+  padding: 94px 0px;
+}
 .features h3 {
   font-weight: bold;
   font-size: 14px;
@@ -159,7 +172,6 @@ h2 {
 }
 .features ul {
   display: flex;
-  margin: 94px auto;
 }
 
 .features li {
@@ -168,9 +180,8 @@ h2 {
 .features li:not(:nth-last-child(1)) {
   margin-right: 30px;
 }
-
-.whatWeDo h2 {
-  margin-bottom: 50px;
+.whatWeDo {
+  padding: 0px 0px 94px 0px;
 }
 
 .whatWeDo ul {
@@ -184,11 +195,10 @@ h2 {
 }
 
 .ourTeam {
-  background-color: var(--background-light-color);
+  background-color: var(--button-portfolio-color);
   font-size: 16px;
   line-height: 1.2;
 
-  margin-top: 94px;
   padding-top: 94px;
   padding-left: auto;
   padding-right: auto;
@@ -203,6 +213,11 @@ h2 {
 .ourTeam h3 {
   margin-top: 30px;
 }
+.teamPhotosDescription {
+  max-width: 200px;
+  margin: 30px;
+}
+
 .ourTeam p {
   color: var(--pretitle-text-color);
 
@@ -290,29 +305,39 @@ address a:focus {
   border-color: transparent;
   color: var(--main-color);
 }
+
 .portfolioCard {
   background: var(--main-color);
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   width: 370px;
 }
+
 .portfolioCardList li:not(:nth-last-child(3n)) {
   margin-left: 30px;
 }
-.portfolioCardList li:not(:nth-last-child(3)) {
+.portfolioCardList li:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+.portfolioCardDescription {
+  margin: 0px 24px 20px 24px;
+  max-width: 322px;
+}
+.border {
+  padding-top: 20px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 .portfolioCard h3 {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin: 20px 24px 4px 24px;
 }
 .portfolioCard p {
   font-size: 16px;
   line-height: 1.9;
-  margin: 0px 24px 20px 24px;
+  margin-top: 4px;
 }
 .portfolioCardList {
   display: flex;
